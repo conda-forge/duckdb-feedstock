@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/duckdb-{{ version }}.tar.gz
-  sha256: a7db6da0366b239ea1e4541fcc19556b286872f5015c9a54c2e347146e25a2ad
+  sha256: a54d37f4abc2afc4f92314aaa56ecf215a411f40af4bffe1e86bd25e62aceee9
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv
 
